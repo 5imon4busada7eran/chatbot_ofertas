@@ -1,0 +1,11 @@
+streamlit
+streamlit_chat
+langchain
+sentence_transformers
+pinecone-client
+torch
+transformers
+openai==0.28
+python-dotenv
+langchain_community 
+tiktoken
