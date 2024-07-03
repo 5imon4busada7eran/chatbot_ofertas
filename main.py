@@ -33,7 +33,7 @@ class Document:
     __str__ = __repr__
 
 
-st.markdown("<h2 style='text-align: center;'>Asistente Regulatorio Virtual</h2>", unsafe_allow_html=True)
+st.markdown("<h2 style='text-align: center;'>Experto en Diseño de Mercados de Ofertas</h2>", unsafe_allow_html=True)
 
 st.markdown(
     """
@@ -50,7 +50,7 @@ st.markdown(
 
 # Initialize session states if they don't exist
 if 'responses' not in st.session_state:
-    st.session_state['responses'] = ["Hola, soy tu asistente regulatorio virtual, ¿En qué puedo ayudarte hoy?"]
+    st.session_state['responses'] = ["Hola, soy experto en el diseño de mercados de ofertas y tengo todos los informes de ECCO International y Vinken-Dictuc en mis conocimientos, ¿En qué puedo ayudarte hoy?"]
 
 if 'requests' not in st.session_state:
     st.session_state['requests'] = []
@@ -70,7 +70,7 @@ if 'buffer_memory' not in st.session_state:
 
 # system_msg_template = SystemMessagePromptTemplate.from_template(
 #     template="""Responda la pregunta con la mayor veracidad posible utilizando el contexto proporcionado,
-# y si la respuesta no está contenida en el texto a continuación, diga 'Podrias preguntarle al equipo de Regulación, seguramente ellos podran orientarte' """)
+# y si la respuesta no está contenida en el texto a continuación, diga 'Podrias preguntarle al equipo de Trading, seguramente ellos podran orientarte' """)
 
 system_msg_template = SystemMessagePromptTemplate.from_template(
     template="""Responde la pregunta con la mayor veracidad posible utilizando el contexto proporcionado. 
@@ -79,9 +79,9 @@ Preguntar siempre si el usuario está satisfecho con la respuesta.
 Iterar hasta tres veces si el usuario no está satisfecho.
 Proporcionar fuentes al final de cada respuesta. 
 Al final de tu respuesta, sugiere correlaciones con otros documentos de la misma temática.
-Cuando el usuario lo pida, ofrece la mejor recomendación basada en tu conocimiento general de las regulaciones y mejores prácticas en la industria, 
+Cuando el usuario lo pida, ofrece la mejor recomendación basada en tu conocimiento general de los diseños de mercados basados en ofertas y mejores prácticas en la industria, 
     incluyendo nuevas ideas y propuestas que puedan ser beneficiosas. Solo si no puedes ofrecer ninguna recomendación útil, entonces sugiere al usuario que 
-    'Podrías preguntarle al equipo de Regulación, seguramente ellos podrán orientarte'.""")
+    'Podrías preguntarle al equipo de Trading, seguramente ellos podrán orientarte'.""")
 
 human_msg_template = HumanMessagePromptTemplate.from_template(template="{input}")
 
